@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-toggle-time-stamp',
-  templateUrl: './toggle-time-stamp.component.html',
-  styleUrls: ['./toggle-time-stamp.component.css']
+  selector: "app-toggle-time-stamp",
+  templateUrl: "./toggle-time-stamp.component.html",
+  styleUrls: ["./toggle-time-stamp.component.css"]
 })
-export class ToggleTimeStampComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class ToggleTimeStampComponent {
+  @Input() timestamp: Date;
+  showTimeAgo: false;
+  constructor() {
   }
-
 }

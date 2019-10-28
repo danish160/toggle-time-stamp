@@ -1,0 +1,3 @@
+<span (click)="showTimeAgo = !showTimeAgo;" *ngIf="showTimeAgo" class="time-stamp clickable" title="{{timestamp | date: 'EEEE, MMMM d, y h:mm:ss a'}}">{{timestamp | timeAgo}}</span>
+
+<span (click)="showTimeAgo = !showTimeAgo;" *ngIf="!showTimeAgo" class="time-stamp clickable" title="{{timestamp | date: 'EEEE, MMMM d, y h:mm:ss a'}}">{{timestamp | date: 'dd MMM yyyy'}}</span>

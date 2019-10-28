@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import moment from "moment";
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  selector: "my-app",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
-export class AppComponent  {
-  name = 'Angular';
+export class AppComponent implements OnInit {
+  name = "Angular";
+  now = new Date();
+  yesterday: Date;
+  lastMonth: Date;
+  nextMonth: Date;
+
+  constructor() {
+    this.yesterday = moment(this.now).add(-1, "days").toDate();
+    this.lastMonth = moment(this.now).add(-1, "months").toDate();
+    this.nextMonth = moment(this.now).add(1, "months").toDate();
+  }
+
+  ngOnInit() {}
 }
