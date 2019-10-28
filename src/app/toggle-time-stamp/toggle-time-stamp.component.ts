@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class ToggleTimeStampComponent {
   @Input() timestamp: Date;
-  showTimeAgo: false;
+   @Input() showTimeAgo: true;
   constructor() {
   }
 }
